@@ -1,1 +1,72 @@
 ini merupakan modul pembelajaran javascript dari kelas belajar Code Politan
+
+Tipe Data Primitif dan Developer Tools Console
+
+Tipe data di dalam javascript
+    1. Number
+    2. String
+    3. Boolean
+    4. Null
+    5. Undefined
+
+Menjalankan code pada Console di suatu browser
+    - REPL (Read Evaluate Print Loop) 
+        jadi pada Console akan melakan 4 tugas tersebut
+
+Tipe data Number
+    - Number
+        di dalam javascript:
+            memiliki 1 tipe data untuk masing masing jenis data. untuk keseluruhan itu di sebut tipe data Number
+                contoh: 12, 124.212, -124 -> itu semua disebut tipe datanya Number
+
+Tipe data NaN (Not A Number)
+    - NaN
+        kapan terjadi output program kita jika, output program tipe data yang salah
+
+Variables
+    Variable adalah sebuah wadah yang berfungsi untuk menyimpan suatu nilai, dan variable dapat di proses pada kode kita
+    let namaVariable = value; ('namaVariable' adalah suatu variable, 'let' adalah perintah pendeklarasikan suatu variable )
+    contoh: let umurMahasiswa = 20;
+
+Memperbaharui value dari suatu tipe data
+    1. inisialisasi sebuah variable 
+    2. update value variable nya
+    contoh :    let score = 0;
+                score = score + 1
+    penulisan kode lebih ringkas 
+                score += 2
+
+Perbedaan perintah const dan let
+    kalau perintah const value dari suatu tipe data tidak dapat akan di update, sedangkan let dapat
+        contoh penggunaan perintah const tersebut itu seperti rumus yang pasti, seperti const rumusLuasPersegiPanjang = "panjang * lebar
+
+fanfec dulu untuk mendeklarasikan sebuat variable itu menggunakan var, tapi sekarang di gantikan menggunakan perintah ler yang lebih efisien dan secure
+
+Tipe data Boolean
+    penggunaan tipe data Boolean itu untuk mengkondisikan sesuatu true / false
+
+Aturan pemberian nama variable
+    https://developer.mozilla.org/en-US/docs/Glossary/Identifier
+    
+    1. Harus dimulai dengan huruf (a-z atau A-Z), underscore (_), atau tanda dollar ($).
+    2. Setelah karakter pertama, bisa menggunakan huruf, angka, underscore, atau tanda dollar.
+    3. Tidak boleh menggunakan kata kunci JavaScript (seperti var, let, const, function, dll).
+    4. Case-sensitive (myVariable dan myvariable dianggap berbeda).
+    5. Tidak boleh menggunakan spasi atau tanda baca selain underscore dan tanda dollar.
+
+    Aturan yang paling sering digunakan (best practices):
+
+    1. Camel Case: Gunakan huruf kecil untuk kata pertama, dan huruf besar untuk awal kata berikutnya. Contoh: firstName, lastName, totalAmount
+    2. Gunakan nama yang deskriptif dan bermakna: Contoh: userAge (lebih baik daripada x atau a)
+    3. Hindari nama yang terlalu pendek atau ambigu: Contoh: calculateTotalPrice (lebih baik daripada calc atau ctp)
+    4. Gunakan bahasa Inggris untuk konsistensi: Contoh: getUserData (lebih baik daripada ambilDataPengguna)
+    5. Awali nama boolean dengan "is", "has", atau "can": Contoh: isActive, hasPermission, canEdit
+    6. Gunakan konstanta ALL_CAPS untuk nilai yang tidak berubah: Contoh: MAX_SIZE, API_KEY
+    7. Gunakan underscore untuk nama private (konvensi, bukan aturan baku): Contoh: _privateMethod, _internalValue
+    8. Hindari penggunaan angka di awal nama: Contoh: item1 (kurang baik) vs firstItem (lebih baik)
+
+    pengetahuan :
+        let namaLengkap = "Fajar Azizi Boang manalu" // Camel Case
+        let NamaLengkap = "Fajar Azizi Boang manalu" // Pascal Case
+        let nama_lengkap = "Fajar Azizi Boang manalu" // Snake Case
+        let $namalengkap = "Fajar Azizi Boang manalu" // simbol
