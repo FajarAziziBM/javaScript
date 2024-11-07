@@ -70,3 +70,85 @@ Aturan pemberian nama variable
         let NamaLengkap = "Fajar Azizi Boang manalu" // Pascal Case
         let nama_lengkap = "Fajar Azizi Boang manalu" // Snake Case
         let $namalengkap = "Fajar Azizi Boang manalu" // simbol
+
+Tipe data String
+    tipe data Primitif pada javascript
+    contoh : let namaSatKer = "Fajar Azizi Boang Manalu"
+             let namaSatKer = 'Fajar Azizi Boang Manalu'
+    tipe data String memiliki nilai indeks, di mulai dari 0 - seterusnya (sesuai dari isi dari tipe data string)
+    contoh : let namaSatKer = "Fajar Azizi Boang Manalu"
+             namaSatKer[0] -> outputnya f
+
+Method - method pada javascript
+    itu banyak sekali kalau mau melihat method-method pada string bisa di liat dari sini https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
+    contoh : let namaSatKer = "Fajar Azizi Boang Manalu"
+             namaSatKer.toUpperCase() -> outputnya itu FAJAR AZIZI BOANG MANALU 
+
+Method & argumen (parameter)
+    beberapa method dapat di isi parameter
+    contoh : let namaSatKer = "Fajar Azizi Boang Manalu"
+             namaSatKer.indexOf('l') -> outputnya 22 (22 itu indeks)
+
+Template Literals
+    Template literals adalah fitur dalam JavaScript yang diperkenalkan pada ECMAScript 2015 (ES6) yang memungkinkan Anda untuk menulis string dengan cara yang lebih fleksibel dan mudah. Beberapa fitur utama dari template literals adalah:
+        1. Multiline Strings:
+            Dengan template literals, Anda dapat membuat string yang mencakup beberapa baris tanpa perlu menggunakan karakter khusus seperti \n.
+                contoh : const multilineString = `Ini adalah string
+                yang memiliki beberapa baris.`;
+                console.log(multilineString);
+
+        2. Interpolation: 
+            Anda dapat menyisipkan ekspresi JavaScript ke dalam string menggunakan tanda dolar ($) dan kurung kurawal ({}). Ini memudahkan penggabungan variabel dan ekspresi ke dalam string.
+                contoh : const name = 'Fajar Azizi Boang Manalu';
+                         const age = 23;
+                         const greeting = `Halo, nama saya ${name} dan saya berusia ${age} tahun.`;
+                         console.log(greeting);
+        3. Tagging:
+            Template literals juga dapat digunakan dengan fungsi tag, yang memungkinkan Anda untuk memproses string dan ekspresi dengan cara yang lebih kompleks.
+                contoh : function tag(strings, ...values) {
+                            return strings.reduce((result, str, i) => {
+                                return result + str + (values[i] || '');
+                            }, '');
+                         }
+                        
+                        const name = 'Fajar Azizi Boang Manalu';
+                        const message = tag`Halo, nama saya ${name}.`;
+                        console.log(message);
+
+Null & Undefined
+    null -> - nilai "kosong" yang sengaja adalah
+            - perlu dibuat
+            - kalau menginisialisasikan sebuat variable dengan null, maka variable tersebut sudah di identifikasikan sebagai sebuat object
+    Undefined -> variable yang dibuat tapi belum diinisialisasikan value apapun
+
+Object dan Angka acak
+    - Math 
+        adalah objek built-in di JavaScript yang menyediakan berbagai fungsi dan konstanta matematika. Objek ini tidak dapat diubah, dan semua propertinya bersifat statis. Anda tidak perlu membuat instance dari Math untuk menggunakannya; Anda cukup memanggil fungsi yang diinginkan menggunakan Math.
+        Beberapa Fungsi Umum dalam Object Math:
+        1. Fungsi Trigonometri
+        2. Fungsi Eksponensial dan Logaritmik
+        3. Fungsi Pembulatan
+        4. Konstanta
+
+    - Angka Acak (Random Numbers)
+        JavaScript menyediakan fungsi untuk menghasilkan angka acak melalui objek Math, khususnya menggunakan Math.random(). Fungsi ini mengembalikan angka acak antara 0 (inklusif) dan 1 (eksklusif).
+        Menghasilkan Angka Acak:
+        1. Angka Acak antara 0 dan 1:
+            contoh: const randomNum = Math.random();
+                    console.log(randomNum); // Output: Angka acak antara 0 dan 1
+        2. Angka Acak dalam Rentang Tertentu:
+            contoh : function getRandomInRange(min, max) {
+                        return Math.random() * (max - min) + min;
+                     }
+                     const randomInRange = getRandomInRange(1, 10);
+                     console.log(randomInRange); // Output: Angka acak antara 1 dan 10
+
+        3. Angka Acak Bulat:
+            contoh : function getRandomInt(min, max) {
+                        return Math.floor(Math.random() * (max - min + 1)) + min;
+                     }
+                     const randomInt = getRandomInt(1, 10);
+                     console.log(randomInt); // Output: Angka bulat acak antara 1 dan 10
+
+
+
