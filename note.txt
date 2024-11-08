@@ -150,5 +150,113 @@ Object dan Angka acak
                      const randomInt = getRandomInt(1, 10);
                      console.log(randomInt); // Output: Angka bulat acak antara 1 dan 10
 
+JavaScript Logic pembuatan keputusan
 
+    Operator Pembanding
 
+        // Sama dengan (==)
+        console.log(5 == '5'); // true
+
+        // Sama dengan secara ketat (===)
+        console.log(5 === '5'); // false
+
+        // Tidak sama dengan (!=)
+        console.log(5 != '5'); // false
+
+        // Tidak sama dengan secara ketat (!==)
+        console.log(5 !== '5'); // true
+
+        // Lebih besar dari (>)
+        console.log(5 > 3); // true
+
+        // Lebih besar atau sama dengan (>=)
+        console.log(5 >= 5); // true
+
+        // Kurang dari (<)
+        console.log(3 < 5); // true
+
+        // Kurang dari atau sama dengan (<=)
+        console.log(5 <= 5); // true
+
+        // Contoh penggunaan dalam kondisi
+        if (5 > 3) {
+            console.log("5 lebih besar dari 3"); // Ini akan dicetak
+        }
+
+        if (5 === 5) {
+            console.log("5 sama dengan 5"); // Ini juga akan dicetak
+        }
+
+console, alert, dan prompt
+    console.log()
+        Fungsi ini digunakan untuk mencetak output ke konsol. Ini sangat berguna untuk debugging dan melihat nilai variabel.
+
+    alert()
+        Fungsi ini digunakan untuk menampilkan pesan dalam kotak dialog pop-up. Ini sering digunakan untuk memberikan informasi kepada pengguna.
+
+    prompt()
+        Fungsi ini digunakan untuk meminta input dari pengguna. Ini menampilkan kotak dialog dengan input teks yang memungkinkan pengguna untuk memasukkan nilai.
+
+Menjalankan JavaScript lewat file (bukan lewat browser lagi)
+    untuk selanjutkan di lanjutkan pada file index.html dan index.js 
+
+melakukan statement kondisi (if, if else, else)
+
+melakukan Operator logic and 
+    function contohBasicAnd() {
+        console.log(true && true);   // true
+        console.log(true && false);  // false
+        console.log(false && true);  // false
+        console.log(false && false); // false
+    }
+    // Contoh penggunaan
+    function cekEligibilitas(umur, punyaKTP) {
+        // Kedua kondisi harus benar
+        if (umur >= 17 && punyaKTP === true) {
+            console.log("Anda boleh mendaftar!");
+        } else {
+            console.log("Maaf, Anda tidak memenuhi syarat.");
+        }
+    }
+
+    cekEligibilitas(18, true);   // Boleh mendaftar
+    cekEligibilitas(16, true);   // Tidak boleh
+    cekEligibilitas(20, false);  // Tidak boleh
+
+melakukan Operator logic or
+    function contohBasicOr() {
+        // OR mengembalikan true jika SALAH SATU kondisi benar
+        console.log(true || true);    // true
+        console.log(true || false);   // true
+        console.log(false || true);   // true
+        console.log(false || false);  // false
+
+        // Contoh praktis
+        function cekEligibilitas(umur, punyaKTP) {
+            // Cukup salah satu kondisi terpenuhi
+            if (umur >= 17 || punyaKTP === true) {
+                console.log("Anda bisa melanjutkan!");
+            } else {
+                console.log("Maaf, tidak memenuhi syarat.");
+            }
+        }
+
+        cekEligibilitas(16, true);   // Bisa melanjutkan
+        cekEligibilitas(18, false);  // Bisa melanjutkan
+        cekEligibilitas(15, false);  // Tidak bisa
+    }
+
+melakukan Operator Logic Not
+
+melakukan Operator Swicth
+    switch (ekspresi) {
+    case nilai1:
+        // Blok kode jika ekspresi sama dengan nilai1
+        break;
+    case nilai2:
+        // Blok kode jika ekspresi sama dengan nilai2
+        break;
+    default:
+        // Blok kode jika tidak ada yang cocok
+}
+    
