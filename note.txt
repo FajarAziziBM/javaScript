@@ -248,15 +248,118 @@ melakukan Operator logic or
 
 melakukan Operator Logic Not
 
-melakukan Operator Swicth
-    switch (ekspresi) {
-    case nilai1:
-        // Blok kode jika ekspresi sama dengan nilai1
-        break;
-    case nilai2:
-        // Blok kode jika ekspresi sama dengan nilai2
-        break;
-    default:
-        // Blok kode jika tidak ada yang cocok
-}
+    melakukan Operator Swicth
+        switch (ekspresi) {
+        case nilai1:
+            // Blok kode jika ekspresi sama dengan nilai1
+            break;
+        case nilai2:
+            // Blok kode jika ekspresi sama dengan nilai2
+            break;
+        default:
+            // Blok kode jika tidak ada yang cocok
+    }
     
+Struktur data array pada javascript
+    penulisan array pada javascript
+        let sebuatArray = [];
+        contoh = let warnaRbg = ['merah', 'biru', 'hijau'];
+    indeksing sebuah arrya dan updating arrya
+        indeksing pada sebuah array itu dimuali dari 0.
+        contoh let warnaRbg = ['merah', 'bir', 'hijau'];
+               warnaRbg[1] = 'biru';
+    method push, pop, shift, unshift pada array
+        1. Metode push()
+            Fungsi: Menambahkan satu atau lebih elemen ke akhir array.
+            Mengembalikan: Panjang baru dari array setelah elemen ditambahkan.
+            Contoh:
+                let angka = [1, 2, 3];
+                angka.push(4); // Menambahkan 4 ke akhir array
+                console.log(angka); // Output: [1, 2, 3, 4]
+        2. Metode pop()
+            Fungsi: Menghapus elemen terakhir dari array.
+            Mengembalikan: Elemen yang dihapus. Jika array kosong, mengembalikan undefined.
+            Conotoh:
+                let buah = ["apel", "pisang", "ceri"];
+                let buahTerakhir = buah.pop(); // Menghapus "ceri"
+                console.log(buahTerakhir); // Output: "ceri"
+                console.log(buah); // Output: ["apel", "pisang"]
+        3. Metode shift()
+            Fungsi: Menghapus elemen pertama dari array.
+            Mengembalikan: Elemen yang dihapus. Jika array kosong, mengembalikan undefined.
+            Contoh:
+                let warna = ["merah", "hijau", "biru"];
+                let warnaPertama = warna.shift(); // Menghapus "merah"
+                console.log(warnaPertama); // Output: "merah"
+                console.log(warna); // Output: ["hijau", "biru"]
+        4. Metode unshift()
+            Fungsi: Menambahkan satu atau lebih elemen ke awal array.
+            Mengembalikan: Panjang baru dari array setelah elemen ditambahkan.
+            Contoh: 
+                let hewan = ["singa", "harimau"];
+                let panjangBaru = hewan.unshift("gajah"); // Menambahkan "gajah" di awal
+                console.log(panjangBaru); // Output: 3
+                console.log(hewan); // Output: ["gajah", "singa", "harimau"]
+
+        Ringkasan
+        push(): Menambahkan elemen ke akhir array.
+        pop(): Menghapus elemen terakhir dari array.
+        shift(): Menghapus elemen pertama dari array.
+        unshift(): Menambahkan elemen ke awal array.
+    
+    method-method pada array di javascript.
+        ini beberapa mothod yang di jelaskan pada vidio\
+        1. Array.prototype.concat()
+            digunakan untuk menggabungkan dua atau lebih array menjadi satu array baru. Metode ini tidak mengubah array asli.
+        2. Array.prototype.indexOf()
+            digunakan untuk mencari indeks dari elemen tertentu dalam array. Jika elemen tidak ditemukan, metode ini akan mengembalikan -1.
+        3. Array.prototype.includes()
+            digunakan untuk memeriksa apakah sebuah array mengandung elemen tertentu. Metode ini mengembalikan true jika elemen ditemukan dan false jika tidak.
+        4. Array.prototype.sort()
+            digunakan untuk mengurutkan elemen-elemen dalam array. Metode ini mengubah array asli dan mengembalikan array yang sudah diurutkan.
+        
+        bisa coba coba di sini, masih banyak lagi
+        https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/at
+
+Const pada array di javascript
+    Dalam JavaScript, ketika memilih cara untuk mendeklarasikan variabel yang akan menyimpan array, praktik terbaik adalah menggunakan const atau let, tergantung pada kebutuhanmu. Berikut adalah penjelasan lebih lanjut tentang kapan dan mengapa menggunakan masing-masing:
+    1. Menggunakan const
+        Kapan digunakan: Gunakan const ketika kamu ingin mendeklarasikan array yang tidak akan direassign (diubah untuk merujuk ke array baru). Ini sangat berguna ketika kamu ingin memastikan bahwa variabel tersebut selalu merujuk pada array yang sama, meskipun isi dari array tersebut dapat diubah.
+        Contoh: 
+            const buah = ['apel', 'jeruk', 'pisang'];
+
+            // Mengubah isi array
+            buah.push('mangga'); // Ini diperbolehkan
+            console.log(buah); // Output: ['apel', 'jeruk', 'pisang', 'mangga']
+
+            // Namun, tidak bisa melakukan ini:
+            // buah = ['kiwi', 'anggur']; // Error: Assignment to constant variable
+
+    2. Menggunakan let
+        Kapan digunakan: Gunakan let ketika kamu perlu mendeklarasikan array yang mungkin perlu direassign atau jika kamu berada dalam blok scope tertentu (misalnya, di dalam loop atau blok kondisional) dan ingin mengubah referensi array tersebut.
+        Conotoh:
+            let angka = [1, 2, 3];
+
+            // Mengubah isi array
+            angka.push(4); // Ini diperbolehkan
+            console.log(angka); // Output: [1, 2, 3, 4]
+
+            // Reassign ke array baru
+            angka = [5, 6, 7]; // Ini juga diperbolehkan
+            console.log(angka); // Output: [5, 6, 7]
+
+    Kesimpulan
+        Gunakan const untuk mendeklarasikan array jika kamu tidak berencana untuk mengubah referensi array tersebut, tetapi masih ingin mengubah isi dari array.
+        Gunakan let jika kamu perlu mendeklarasikan array yang mungkin perlu direassign atau jika kamu berada dalam scope yang lebih terbatas.
+
+array multidimendi (nested arrya) pada array
+    Nested array (array bersarang) adalah array yang berisi array lain sebagai elemennya. Konsep ini memungkinkan kita untuk menyimpan data yang memiliki struktur hierarkis atau multidimensional. Nested array sering digunakan untuk merepresentasikan data yang kompleks, seperti tabel, matriks, atau struktur data yang lebih dalam.
+
+    Struktur Nested Array
+        Sebuah nested array dapat memiliki beberapa tingkat kedalaman. Berikut adalah contoh sederhana dari nested array:
+            const nestedArray = [
+                [1, 2, 3],       // Array pertama
+                [4, 5, 6],       // Array kedua
+                [7, 8, 9]        // Array ketiga
+            ];
+
