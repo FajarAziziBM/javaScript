@@ -363,3 +363,92 @@ array multidimendi (nested arrya) pada array
                 [7, 8, 9]        // Array ketiga
             ];
 
+Struktur data array pada javascripts 
+
+    1. Apa Itu Object?
+        Object dalam JavaScript adalah tipe data yang digunakan untuk menyimpan koleksi data dan entitas yang lebih kompleks. Objek adalah kumpulan dari pasangan kunci-nilai (key-value pairs), di mana kunci adalah string (atau simbol) dan nilai dapat berupa tipe data apa pun, termasuk angka, string, array, fungsi, atau objek lain.
+
+        Contoh sederhana dari objek:
+            const person = {
+                name: "John",
+                age: 30,
+                isStudent: false
+            };
+
+    2. Cara Membuat Struktur Data Object
+        Ada beberapa cara untuk membuat objek dalam JavaScript:
+
+        a. Menggunakan Literal Objek
+            Cara paling umum untuk membuat objek adalah dengan menggunakan literal objek.
+        contoh:
+            const car = {
+                brand: "Toyota",
+                model: "Camry",
+                year: 2020
+            };
+
+        b. Menggunakan Constructor Function
+            Anda juga dapat membuat objek menggunakan fungsi konstruktor.
+            contoh:
+            function Car(brand, model, year) {
+                this.brand = brand;
+                this.model = model;
+                this.year = year;
+            }
+
+            const myCar = new Car("Honda", "Civic", 2021);
+        c. Menggunakan Object.create()
+            Metode ini memungkinkan Anda untuk membuat objek baru dengan objek yang ada sebagai prototipe.
+            contoh:
+            const animal = {
+                type: "mammal"
+            };
+            
+            const dog = Object.create(animal);
+            dog.breed = "Labrador";
+
+    3. Cara Memanggil Data Dari Object
+        Anda dapat mengakses nilai dalam objek menggunakan dua cara: dot notation dan bracket notation.
+
+        a. Dot Notation
+            console.log(person.name); // Output: John
+            console.log(car.year); // Output: 2020
+
+        b. Bracket Notation
+            console.log(person["age"]); // Output: 30
+            console.log(car["model"]); // Output: Camry
+    
+    4. Cara Membuat Object Berjalan
+        Anda dapat membuat objek yang memiliki metode (fungsi) di dalamnya. Metode ini dapat dipanggil untuk melakukan tindakan tertentu.
+
+         contoh:
+        const calculator = {
+            add: function(a, b) {
+                return a + b;
+            },
+            subtract: function(a, b) {
+                return a - b;
+            }
+        };
+
+        console.log(calculator.add(5, 3)); // Output: 8
+        console.log(calculator.subtract(5, 3)); // Output: 2
+
+    5. Cara Memanggil Object Di Dalam Array
+        Anda dapat menyimpan objek dalam array dan mengaksesnya dengan menggunakan indeks array.
+
+        Contoh:
+            const users = [
+            { name: "Alice", age: 25 },
+            { name: "Bob", age: 30 },
+            { name: "Charlie", age: 35 }
+        ];
+
+        // Mengakses objek dalam array
+        console.log(users[0].name); // Output: Alice
+        console.log(users[1]["age"]); // Output: 30
+
+        // Menggunakan loop untuk menampilkan semua pengguna
+        users.forEach(user => {
+            console.log(`${user.name} is ${user.age} years old.`);
+        });
